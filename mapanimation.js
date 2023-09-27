@@ -70,9 +70,9 @@ function addMarker(bus){
 function getIcon(bus){
     //select icon 0 = north(red), 1 = south(blue)
     if (bus.attributes.direction_id ===0) {
-        return 'red.png';
+        return '/images/red.png';
     }
-    return 'blue.png'
+    return 'images/blue.png'
 }
 
 function moveMarker(marker,bus) {
