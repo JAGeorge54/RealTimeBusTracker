@@ -1,3 +1,3 @@
 # RealTimeBusTracker
 
-<img src="/images/map.jpg">
+<img src="/images/map.jpg" style= "width: 50px; height: 50px">
