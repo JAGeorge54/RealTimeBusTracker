@@ -72,7 +72,7 @@ function getIcon(bus){
     if (bus.attributes.direction_id ===0) {
         return '/images/red.png';
     }
-    return 'images/blue.png'
+    return '/images/blue.png'
 }
 
 function moveMarker(marker,bus) {
