@@ -45,10 +45,13 @@ async function getBusLocations(){
 // sets marker and icon
 function addMarker(bus){
     let icon = getIcon(bus);
+    //sett attributes to variables
     let nextStop = "Next Stop: " + (bus.attributes.current_stop_sequence + 1);
     let occupancy = "Occupancy:" + "<br>" + bus.attributes.occupancy_status;
     let busNumber = "Bus: " + bus.id;
+    //add variables to content window
     let contentString = "<h4>" + busNumber + "<br>" + nextStop + "<br>" + "<br>" + occupancy + "<h4>";
+    //adds marker to map
     let marker = new google.maps.Marker({
         position: {
             lat: bus.attributes.latitude, 
@@ -58,9 +61,11 @@ function addMarker(bus){
         icon: icon,
         id: bus.id
     });
+    //added info window
     let infowindow = new google.maps.InfoWindow({
         content: contentString
     });
+    //adds listener to open info window
     marker.addListener('click', function(){
         infowindow.open(map, marker);
     })
