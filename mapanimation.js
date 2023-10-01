@@ -81,7 +81,7 @@ function getIcon(bus){
 }
 
 function moveMarker(marker,bus) {
-    //changes icon if bus changes direction
+    //changes icon if bus changes direction north(red), 1 = south(blue)
     let icon = getIcon(bus);
     marker.setIcon(icon);
 
